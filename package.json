@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "react-audio-player": "^0.17.0",
-    "react-router-dom": "^6.23.1"
+    "react-router-dom": "^6.23.1",
+    "typescript": "^5.4.5"
   }
 }

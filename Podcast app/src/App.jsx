@@ -7,6 +7,8 @@ import Genre from './components/Genre';
 import AudioPlayer from './components/Audioplayer';
 
 function App(){
+
+  return(
   <BrowserRouter>
   <Routes>
     <Route path="/" element={<Preview />} />
@@ -19,6 +21,7 @@ function App(){
   </Routes>
   
   </BrowserRouter>
+  )
 }
 
 export default App
