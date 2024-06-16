@@ -16,7 +16,7 @@ const Episode = () => {
   }, [episodeId]); 
 
   return (
-    <div>
+   /* <div>
       {episode ? (
         <div>
           <h2>{episode.title}</h2>
@@ -25,7 +25,7 @@ const Episode = () => {
       ) : (
         <p>Loading...</p>
       )}
-    </div>
+    </div>*/
   );
 };
 

@@ -30,4 +30,4 @@ const Show = () => {
   );
 };
 
-export  Show;
+export default Show;
