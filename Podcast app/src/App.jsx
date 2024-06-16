@@ -1,27 +1,35 @@
-import {BrowserRouter,Routes,Route} from 'react-router-dom';
-import Preview from './components/Preview';
+// src/App.js
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import Show from './components/Show';
-import Seasons from './components/Seasons';
-import Episode from './components/Episode';
+import Preview from './components/Preview';
 import Genre from './components/Genre';
-import AudioPlayer from './components/Audioplayer';
+import Season from './components/Season';
+import Episode from './components/Episode';
 
-function App(){
+const App = () => {
+  return (
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li><Link to="/">Show</Link></li>
+            <li><Link to="/preview">Preview</Link></li>
+            <li><Link to="/genre">Genre</Link></li>
+            <li><Link to="/season">Season</Link></li>
+            <li><Link to="/episode">Episode</Link></li>
+          </ul>
+        </nav>
+        <Switch>
+          <Route exact path="/" component={Show} />
+          <Route path="/preview" component={Preview} />
+          <Route path="/genre" component={Genre} />
+          <Route path="/season/:id" component={Season} />
+          <Route path="/episode/:id" component={Episode} />
+        </Switch>
+      </div>
+    </Router>
+  );
+};
 
-  return(
-  <BrowserRouter>
-  <Routes>
-    <Route path="/" element={<Preview />} />
-    <Route path="/show/:id" element={<Show />} />
-    <Route path="/seasons/:id" element={<Seasons/>}/>
-    <Route path="/episode/:id" element={<Episode/>}/>
-    <Route path="/genre/:id" element={<Genre/>}/>
-    <Route path="/audioplayer" element={<AudioPlayer/>}/>
+export default App;
 
-  </Routes>
-  
-  </BrowserRouter>
-  )
-}
-
-export default App
